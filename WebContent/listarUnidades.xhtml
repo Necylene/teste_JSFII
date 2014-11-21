@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html">
+
+<h:body>
+
+	<f:view>
+	<h:panelGrid>
+	<h:dataTable id="tableUnidade" value="#{unidadeBean.unidadeLista}" var="uni" title="Unidades Cadastradas" border="1" rows="10" >
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="Codigo da Unidade" />
+		 </f:facet>
+		 <h:outputText value="#{uni.codigo}"/>
+		 </h:column>
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="Descrição da Unidade" />
+		 </f:facet>
+		 <h:outputText value="#{uni.descricao}"/>
+		 </h:column>		 
+	 </h:dataTable>
+	 </h:panelGrid>
+	</f:view>
+	
+    <h:form>
+ 	 <br/>	
+ 	 <h:commandButton id="btnE" value="Voltar Início" type="submit" action="#{unidadeBean.VoltarInicio}"/>
+	</h:form>
+
+</h:body>
+</html>
