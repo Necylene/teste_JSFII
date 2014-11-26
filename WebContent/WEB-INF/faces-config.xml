@@ -4,36 +4,35 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
     version="2.2">
+    
+    <managed-bean>		
+		<managed-bean-name>clienteBean</managed-bean-name>		
+		<managed-bean-class>teste_JSFII.clienteMB</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>	
+	</managed-bean>
 
     <managed-bean>		
-		<managed-bean-name>
-			produtoBean
-		</managed-bean-name>		
-		<managed-bean-class>
-			teste_JSFII.ProdutoMB
-		</managed-bean-class>
-		<managed-bean-scope>
-			session
-		</managed-bean-scope>	
+		<managed-bean-name>produtoBean</managed-bean-name>		
+		<managed-bean-class>teste_JSFII.ProdutoMB</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>	
 	</managed-bean>
 	
     <managed-bean>		
-		<managed-bean-name>
-			unidadeBean
-		</managed-bean-name>		
-		<managed-bean-class>
-			teste_JSFII.UnidadeMB
-		</managed-bean-class>
-		<managed-bean-scope>
-			session
-		</managed-bean-scope>	
+		<managed-bean-name>	unidadeBean	</managed-bean-name>		
+		<managed-bean-class>teste_JSFII.UnidadeMB</managed-bean-class>
+		<managed-bean-scope>session	</managed-bean-scope>	
 	</managed-bean>
 	
     <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
+        
+        <navigation-case>
+			<from-outcome>cadastroCliente</from-outcome>
+			<to-view-id>cadastroCliente.xhtml</to-view-id>
+		</navigation-case>
        
     	<navigation-case>
-			<from-outcome>cadastro</from-outcome>
+			<from-outcome>cadastroProduto</from-outcome>
 			<to-view-id>cadastroProduto.xhtml</to-view-id>
 		</navigation-case>
 		
@@ -41,6 +40,11 @@
 			<from-outcome>cadastroUnidade</from-outcome>
 			<to-view-id>cadastroUnidade.xhtml</to-view-id>
 		</navigation-case>
+		
+		<navigation-case>
+    	    <from-outcome>listarClientes</from-outcome>
+    	    <to-view-id>listarCliente.xhtml</to-view-id>
+    	</navigation-case>
 		
     	<navigation-case>
     	    <from-outcome>listarProdutos</from-outcome>
@@ -50,9 +54,18 @@
     	<navigation-case>
     	    <from-outcome>listarUnidades</from-outcome>
     	    <to-view-id>listarUnidades.xhtml</to-view-id>
-    	</navigation-case>
-	
+    	</navigation-case>	
     </navigation-rule>
+    
+    
+    <navigation-rule>
+        <from-view-id>/cadastroCliente.xhtml</from-view-id>
+       
+    	<navigation-case>
+			<from-outcome>salvo</from-outcome>
+			<to-view-id>index.xhtml</to-view-id>
+		</navigation-case>	
+    </navigation-rule> 
     
     <navigation-rule>
         <from-view-id>/cadastroProduto.xhtml</from-view-id>
@@ -60,8 +73,7 @@
     	<navigation-case>
 			<from-outcome>salvo</from-outcome>
 			<to-view-id>index.xhtml</to-view-id>
-		</navigation-case>
-	
+		</navigation-case>	
     </navigation-rule>    
     
     <navigation-rule>
@@ -70,8 +82,16 @@
     	<navigation-case>
 			<from-outcome>salvo</from-outcome>
 			<to-view-id>index.xhtml</to-view-id>
-		</navigation-case>
-	
+		</navigation-case>	
+    </navigation-rule> 
+    
+    <navigation-rule>
+        <from-view-id>/listarClientes.xhtml</from-view-id>
+       
+    	<navigation-case>
+			<from-outcome>voltar</from-outcome>
+			<to-view-id>index.xhtml</to-view-id>
+		</navigation-case>	
     </navigation-rule> 
     
     <navigation-rule>
@@ -80,8 +100,7 @@
     	<navigation-case>
 			<from-outcome>voltar</from-outcome>
 			<to-view-id>index.xhtml</to-view-id>
-		</navigation-case>
-	
+		</navigation-case>	
     </navigation-rule> 
     
     <navigation-rule>
@@ -90,8 +109,7 @@
     	<navigation-case>
 			<from-outcome>voltar</from-outcome>
 			<to-view-id>index.xhtml</to-view-id>
-		</navigation-case>
-	
+		</navigation-case>	
     </navigation-rule> 
     
 </faces-config>

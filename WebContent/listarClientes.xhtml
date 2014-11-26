@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html">
+
+<h:body>
+
+	<f:view>
+	<h:panelGrid>
+	<h:dataTable id="tableCliente" value="#{clienteBean.clienteLista}" var="c" title="Clientes Cadastradas" border="1" rows="10" >
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="Nome" />
+		 </f:facet>
+		 <h:outputText value="#{c.nome}"/>
+		 </h:column>
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="CPF" />
+		 </f:facet>
+		 <h:outputText value="#{c.cpf}"/>
+		 </h:column>
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="Endereço" />
+		 </f:facet>
+		 <h:outputText value="#{c.cliente.endereco}"/>
+		 </h:column>  
+		 <h:column>
+		 <f:facet name="header">
+		 <h:outputText value="Data de Nascimento" />
+		 </f:facet>
+		 <h:outputText value="#{c.dataNascimento}"/>
+		 </h:column> 
+ 
+	 </h:dataTable>
+	 </h:panelGrid>
+	</f:view>
+	
+	<h:form>
+ 	 <br/>	
+ 	 <h:commandButton id="btnE" value="Voltar Início" type="submit" action="#{clienteBean.VoltarInicio}"/>
+	</h:form>
+
+</h:body>
+</html>

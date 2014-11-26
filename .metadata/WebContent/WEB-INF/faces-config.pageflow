@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14153817536861" configfile="/teste_JSFII/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14153817536861" configfile="/teste_JSFII/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="122" y="754" id="pf14170222651991" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14170222651992 pf14170222651993 pf14170222651994 pf14170222651995" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="cadastroProduto.xhtml" x="338" y="178" id="pf14170222651996" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14170222651992" path="cadastroProduto.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="cadastroUnidade.xhtml" x="338" y="562" id="pf14170222651997" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14170222651993" path="cadastroUnidade.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listarProdutos.xhtml" x="338" y="946" id="pf14170222651998" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14170222651994" path="listarProdutos.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listarUnidades.xhtml" x="338" y="1330" id="pf14170222651999" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf14170222651995" path="listarUnidades.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="cadastroProduto.xhtml" x="122" y="1138" id="pf141702226519910" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf141702226519911" path="/cadastroProduto.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="338" y="1714" id="pf141702226519912" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf141702226519911 pf141702226519913 pf141702226519914 pf141702226519915" path="index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="cadastroUnidade.xhtml" x="122" y="1522" id="pf141702226519916" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf141702226519913" path="/cadastroUnidade.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listarProdutos.xhtml" x="122" y="1906" id="pf141702226519917" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf141702226519914" path="/listarProdutos.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listarUnidades.xhtml" x="122" y="2290" id="pf141702226519918" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf141702226519915" path="/listarUnidades.xhtml"/>
+  <links id="pf14170222651992" target="pf14170222651996" source="pf14170222651991" outcome="cadastroProduto"/>
+  <links id="pf14170222651993" target="pf14170222651997" source="pf14170222651991" outcome="cadastroUnidade"/>
+  <links id="pf14170222651994" target="pf14170222651998" source="pf14170222651991" outcome="listarProdutos"/>
+  <links id="pf14170222651995" target="pf14170222651999" source="pf14170222651991" outcome="listarUnidades"/>
+  <links id="pf141702226519911" target="pf141702226519912" source="pf141702226519910" outcome="salvo"/>
+  <links id="pf141702226519913" target="pf141702226519912" source="pf141702226519916" outcome="salvo"/>
+  <links id="pf141702226519914" target="pf141702226519912" source="pf141702226519917" outcome="voltar"/>
+  <links id="pf141702226519915" target="pf141702226519912" source="pf141702226519918" outcome="voltar"/>
+</pageflow:Pageflow>
